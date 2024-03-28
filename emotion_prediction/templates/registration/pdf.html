@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentence and Emotion PDF</title>
+  <style>
+
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .table-container {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 150px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgb(238, 90, 115);
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e0e0e0;
+    }
+    @page {
+         size: A4 portrait; 
+         margin: 20mm 20mm 20mm 20mm;
+      }
+  </style>
+</head>
+<body>
+
+  <h1>Result Per-Paragraph</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Sentence</th>
+          <th>Emotion</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>{{ recent_user_story.phrase }}</td>
+          <td>{{ recent_user_story.analyzed_emotion }}</td>
+        </tr>
+     
+        <!-- <tr>
+          <td>sentence</td>
+          <td>Sadness</td>
+        </tr>
+        <tr>
+          <td>sentence</td>
+          <td>Fear</td>
+        </tr>
+        <tr>
+          <td>sentence</td>
+          <td>Surprise</td>
+        </tr>
+        <tr>
+          <td>sentence</td>
+          <td>Disgust</td>
+        </tr>
+        <tr>
+          <td>sentence</td>
+          <td>Anger</td>
+        </tr> -->
+        
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

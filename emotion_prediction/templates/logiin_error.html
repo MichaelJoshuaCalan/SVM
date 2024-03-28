@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nabla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'newcss/login.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <img src="" alt="">
+            <a href="{% url 'home' %}#hero">Home</a>
+            <a href="{% url 'home' %}#about">About</a>
+            <a href="{% url 'home' %}#contact">Contacts</a>
+            <a href="{% url 'home' %}#team">Team</a>
+            <a href="{% url 'register' %}">Sign Up</a>
+        </nav>
+    </div>
+    <div class="container">
+        <center><div class="logo"><img src="{% static 'newimg/log.png' %}" alt="" style="width:80%; "></div></center>
+
+        <form method="POST" action="">
+          {% csrf_token %}
+          <h3 style="color:red;text-align:center;display:flex;justify-content:center">Invalid Input!</h3>
+            <div class="input">
+                <i class="bi bi-person-circle icon"></i>&nbsp;
+                <input style="width: 70%;padding: 10px;border-radius: 5px;font-size: 18px;" 
+                type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="input">
+                <i class="bi bi-file-lock2 icon"></i>&nbsp;
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Log In">
+            </div>
+            <div class="forgot">
+                <a href="{% url 'password_reset' %}">Forgot Password</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
